@@ -55,6 +55,9 @@ def password_generator(length: int = 8, use_upper: bool = False, use_digits: boo
     if length <= 4:
         raise ValueError(f"The password length must be longer than 4 characters (received: {length}).")
 
+    if length >= 127:
+        raise ValueError(f"The password length must be lower than 127 characters (received: {length}).")
+
     alphabet, requirements = build_alphabet_and_requirements(use_upper, use_digits, use_special)
 
     while True:
