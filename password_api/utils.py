@@ -49,6 +49,9 @@ def password_generator(length: int = 8, use_upper: bool = False, use_digits: boo
     Raises:
         ValueError: Si la longueur demandée est inférieure ou égale à 4.
 
+    Raises:
+        ValueError: Si la longueur demandée est supérieure ou égale à 127.    
+
     Returns:
         str: Le mot de passe généré répondant à toutes les exigences.
     """
